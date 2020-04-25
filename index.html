@@ -1,0 +1,264 @@
+
+
+
+
+<html>
+<head>
+	
+	<title> Reyouf AlRajhi & Reem AlAhmadi Homepage</title>
+        
+</head>
+
+
+<body>
+
+	
+	<h1> <CENTER> WELCOME TO OUR WEBSITE </CENTER></h1>
+
+	<div class="about" id="about">
+		<!--An h2 header - smaller than the h1 header-->
+		<h2>About us</h2>
+		<p>HELLO :)</p>
+	
+		<p> My Name is Reyouf Alrajhi <br> 
+                <p> My Name is Reem AlAhmadi <br>
+               <p> We are friends on same college and this is last semester :)) </p>		
+	</div>
+<script>
+
+function Passvalue() {
+
+var firstName= document.getElemntById("txt").value;
+localStorge.setItem("textvalue",firstName);
+
+return false;
+}
+
+</script>
+ 
+	<div class="Homepage" id="Homepage">
+		<h2> Homepage </h2>
+		<p>  <strong> Please fill in the following form  </strong></p>
+               
+		
+<form action="resullt.html">
+
+<input id="name">
+<button type="button" onclick="TheName()">Submit</button>
+<h1 id="demo"></h1>
+
+      </fieldset>
+
+		
+</form>
+<br><br>
+
+<fieldset>
+
+  <legend><strong>Choose your interests</strong></legend>
+  <div class="infirstborder">
+
+<br>
+Code: <input type="checkbox" id="Code"  onclick="PFunction()">
+
+<p id="textCode" style="display:none">Checkbox is CHECKED Code!</p>
+<br><br>
+Movies: <input type="checkbox" id="Movies"  onclick="PFunction()">
+
+<p id="textMovies" style="display:none">Checkbox is CHECKED Movies!</p>
+<br><br>
+Sports: <input type="checkbox" id="Sports"  onclick="PFunction()">
+
+<p id="textSports" style="display:none">Checkbox is CHECKED Sports!</p>
+<br><br>
+Cooking: <input type="checkbox" id="Cooking"  onclick="PFunction()">
+
+<p id="textCooking" style="display:none">Checkbox is CHECKED Cooking!</p>
+
+<br><br>
+<p> Your interest percent:</p>
+<p id="percentage"></p>
+
+
+<script>
+function PFunction() {
+  var Code = 0;
+  var Movies = 0;
+  var Sports = 0;
+  var Cooking = 0 ;
+  var percentage = 0 ;
+  
+  var checkBoxCode = document.getElementById("Code");
+  var textCode = document.getElementById("textCode");
+  if (checkBoxCode.checked == true){
+    //textCode.style.display = "block";
+    Code = 25 ;
+  } else {
+    textCode.style.display = "none";
+  }
+  
+  var checkBoxMovies = document.getElementById("Movies");
+  var textMovies = document.getElementById("textMovies");
+  
+  if (checkBoxMovies.checked == true){
+    //textMovies.style.display = "block";
+    Movies = 25 ;
+  } else {
+     textMovies.style.display = "none";
+  }
+  
+  
+  
+  var checkBoxSports = document.getElementById("Sports");
+  var textSports = document.getElementById("textSports");
+  
+  if (checkBoxSports.checked == true){
+    //textSports.style.display = "block";
+    Sports = 25;
+  } else {
+     textSports.style.display = "none";
+  }
+  
+  var checkBoxCooking = document.getElementById("Cooking");
+  var textCooking = document.getElementById("textCooking");
+  
+  if (checkBoxCooking.checked == true){
+    //textCooking.style.display = "block";
+    Cooking = 25;
+  } else {
+     textCooking.style.display = "none";
+  }
+  
+  percentage = Code + Movies + Sports + Cooking ;
+  document.getElementById("percentage").innerHTML = percentage;
+}
+</script>
+
+</div>
+
+   
+
+</fieldset>
+
+
+
+<br><br> 
+
+            <fieldset>
+       <legend><strong> What would you like to see?</strong></legend>
+            
+              
+<br>
+<div class="inSecborder">
+
+	<button onclick="CVPage()">CV Page </button>
+ <br><br>
+	<button onclick="MemePage()">Meme page</button>
+
+<script>
+function CVPage() {
+  location.replace("resullt.html")
+}
+
+function MemePage() {
+  location.replace("meme1.html")
+}
+function TheName() {
+  var text;
+  text = document.getElementById("name").value;
+  var str1 = "Hello, Welcome ";
+  var res = str1.concat(text);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+</div>
+</fieldset>
+
+   
+	 
+                 
+	
+	<!--This is the style section.
+		It consists of CSS rules, which could also be included as a separate file.-->
+	<style>
+hl {
+  font-family: sans-serif;
+}
+		/* body tag selector: define a default font. Never use Comic Sans. */
+		body {
+			background-color: #333;
+                        color:white;
+                        font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* .section class selector: set the font of all tags with class="section" */
+		.Homepage {
+			font-family: Arial,Helvetica,sans-serif;
+		}
+
+		/* h2 descendants of .section class: set a background color for all h2 text in sections */
+		.Homepage h2 {
+			background-color: OldLace;
+			font-family: Georgia;
+			color: Gray;
+		}
+
+		/* #courses id with <a> tag selector:
+			set the hover properties of links within #courses element */
+		#courses a:link {
+			color:rgb(100,0,0) ;
+		}
+		#courses a:hover {
+			color:red;
+		}
+		#courses a:active {
+			color:white;
+		}
+		#courses a:visited {
+			color:purple;
+		}
+
+		/* span tag selector: color all span tags red */
+		span {
+			color: red;
+		}
+
+		/* span with .serious class: set font to Impact */
+		span.serious {
+			font-family: "Impact";
+		}
+
+		/* span with .silly class: set font to Comic Sans */
+		span.silly {
+			font-family: "Comic Sans MS";
+		}		
+
+		/* Put the image on the right */
+		#photo { float: right; }
+
+		/* Table Style! */
+		/* Put borders around the cells */
+		th, td { border: solid 1px black; }
+		/* Collapse or 'merge' the borders into each other*/
+		table { border-collapse: collapse; }
+
+		/* Color every other row (tr) light grey */
+		tr:nth-child(even) {
+			background:rgb(220,220,220);
+		}
+
+		/* Color green the text of currentlytaking rows */
+		tr.currentlytaking {
+			color:green;
+		}
+
+		/* Align and style the "For Credit" and "Listener" cells */
+		td.enrollheader {
+			background-color:white;
+			text-align:center;
+			font-weight:bold;
+		}
+
+	</style>
+</body>
+</html>
